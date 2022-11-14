@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card mt-5">
+        <div class="row g-0">
+            <div class="col-md-5">
+                <img src={{product.image}} class="img-fluid d-block" alt="product image">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <p class="p-title">{{product.name}}</p>
+                    <p class="p-brand">Brand: {{product.brand}}</p>
+                    <p class="p-price">Price: <span class="ps-price">${{product.price}}</span></p>
+                    <p class="p-text">{{product.details}} </p>
+                    <span class="p-service">Serviceable:</span>
+                    <form [formGroup]="deliveryForm">
+                        <input type="number" formControlName="inputpincode" placeholder="Enter Delivery Pincode" class="" />
+                        <button class="btn-service" (click)="checkDelivery(product.code)" type="submit">Check</button>
+                    </form>
+                    <div *ngIf="isAvailable > 0">
+                        <span *ngIf="isAvailable === 1" style="color: green">
+                            Expected Delivery by {{expectedtime | date: "longDate" }}
+                        </span>
+                        <span *ngIf="isAvailable === 2" style="color: red">
+                            Not Deliverable to your location
+                        </span>
+                        <span *ngIf="isAvailable === 3" style="color: red">
+                            Enter your pincode to check deliverablitiy!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

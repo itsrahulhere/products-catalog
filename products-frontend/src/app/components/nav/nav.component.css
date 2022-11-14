@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.btn-login {
+    background-color: rgb(43, 116, 226);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid rgb(130, 116, 226);
+    border-radius: 25px;
+    padding: 2px 15px;
+    margin-right: 10%;
+}
+
+.btn-login:hover {
+    background-color: rgb(43, 95, 226);
+
+}
+
+.btn-signup {
+    background-color: rgb(226, 80, 43);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid rgb(226, 167, 43);
+    border-radius: 25px;
+    padding: 0 15px;
+}
+
+.btn-signup:hover {
+    background-color: rgb(226, 50, 43);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+}
+
+.navbar {
+    height: 60px;
+    background-image: linear-gradient(180deg, #550052, #3a0038, #280026, #1f001e, rgb(0, 0, 0));
+    padding: 0 4% 0 2%;
+}
+
+@media screen and (max-width: 438px) {
+    
+    .navbar {
+        height: 100px;
+        background-image: linear-gradient(180deg, #550052, #3a0038, #280026, #1f001e, rgb(0, 0, 0));
+        padding: 0 4% 0 2%;
+    }
+    
+}

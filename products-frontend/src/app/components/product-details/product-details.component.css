@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-service {
+    background-color: rgb(113, 215, 118);
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid rgb(59, 164, 64);
+    border-radius: 25px;
+    padding: 2px 12px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.btn-service:hover {
+    background-color: rgb(55, 209, 63);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    border-radius: 25px;
+    padding: 10px;
+    width: 650px;
+    height: 300px
+}
+
+input {
+    border: 1px solid rgb(215, 215, 215);
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
+}
+
+.p-title {
+    font-size: xx-large;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#550052, #3a0038, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.p-brand {
+    color: rgb(6, 100, 208);
+    font-weight: 500;
+}
+
+.p-price {
+    color: rgb(117, 116, 116);
+    font-weight: 500;
+}
+
+.ps-price {
+    color: rgb(255, 51, 0);
+    font-size: larger;
+    font-weight: 600;
+}
+
+.p-text {
+    font-weight: 300;
+    text-align: justify;
+}
+
+.p-service {
+    color: rgb(117, 116, 116);
+    margin-right: 10px;
+    font-weight: 500;
+}

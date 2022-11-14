@@ -1,0 +1,11 @@
+
+<nav class="navbar">
+    <div class="container-fluid">
+        <a routerLink="/home" class="navbar-brand">Product Catalog</a>
+        <div class="d-flex">
+          <button *ngIf="!isLogIn" routerLink="/login" class="btn btn-login"> Login </button>
+          <button *ngIf="isLogIn" (click)="logout()" class="btn btn-login"> Logout </button>
+          <button *ngIf="!isLogIn" routerLink="/signup" class="btn btn-signup">Signup</button>   
+        </div>
+      </div>
+  </nav>

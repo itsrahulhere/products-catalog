@@ -1,0 +1,149 @@
+<div class="container">
+    <br />
+
+    <form [formGroup]="formValue">
+        <div class="row">
+            <div class="head text-center col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                Registration
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div *ngIf="isValidEmail" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> Enter valid email!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div *ngIf="isValidFirstname" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> Firstname is required!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div *ngIf="isValidLastname" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> Lastname is required!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div *ngIf="isValidPwd1" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> Password is required!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div *ngIf="isValidPwd2" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> Confirm Password is required!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div *ngIf="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Success!</strong> Registration successful!
+                    <button (click)="closeSuccessAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div *ngIf="failureAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Failed!</strong> User already Exist!!
+                    <button (click)="closeFailureAlert()" type="button" class="close" data-dismiss="alert"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            </div>
+        </div>
+        <!-- <div>Register with your email and password</div> -->
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" formControlName="email" placeholder="Email *" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span style="color: red" *ngIf="f['email'] && f['email'].invalid && f['email'].touched">
+                            Invalid Email!
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input type="text" formControlName="firstname" placeholder="First name *" />
+                        <span style="color: red"
+                        *ngIf="f['firstname'] && f['firstname'].invalid && f['firstname'].touched">
+                        Invalid Firstname!
+                    </span>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input type="text" formControlName="lastname" placeholder="Last name *" />
+                        <span style="color: red"
+                            *ngIf="f['lastname'] && f['lastname'].invalid && f['lastname'].touched">
+                            Invalid Lastname!
+                        </span>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input type="password" name="pwd1" formControlName="password" placeholder="Password *" />
+                        <span style="color: red"
+                            *ngIf="f['password'] && f['password'].invalid && f['password'].touched">
+                            Password must have atleast: <br/>
+                            6 characters, a lowercase letter, <br/>
+                            an uppercase letter, a digit, <br />
+                            and a special symbol.
+                        </span>
+                    </div>
+                    
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <input type="password" name="pwd2" formControlName="password2"
+                            placeholder="Confirm password *" />
+                        <div *ngIf="f['password2'] && f['password2'].invalid && f['password2'].touched">
+                            <span style="color: red" *ngIf="f['password2'].errors?.['required']">
+                                Confirm Password is Required!
+                            </span>
+                        </div>
+                    </div>
+                    <span style="color: red" *ngIf="f['password2'].errors?.['confirmedValidator']">
+                        Password and Confirm Password must be same!
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col">
+    
+                      
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <button type="submit" class="btn btn-submit" [disabled]="f['password2'].errors?.['confirmedValidator']" (click)="userRegister()">SUBMIT</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12"></div>
+            <div class="text-center col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a routerLink="/login" href="#">Have an account already?</a>
+            </div>
+        </div>
+
+    </form>
+</div>

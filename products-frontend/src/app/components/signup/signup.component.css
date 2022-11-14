@@ -1,0 +1,14 @@
+.btn {
+    border: 1.5px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+
+}
+
+.row {
+    margin: 10px;
+}
+.name-field {
+    text-align: right;
+ 
+}

@@ -1,0 +1,9 @@
+.head {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(#550052, #3a0038);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

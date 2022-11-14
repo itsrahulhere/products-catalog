@@ -1,0 +1,16 @@
+package com.rahul.productsbackend.service;
+
+import java.util.Set;
+
+import com.rahul.productsbackend.model.Delivery;
+
+public interface DeliveryService {
+	public Set<Delivery> findAllDelivery();
+
+	
+	public Delivery addDelivery(Delivery delivery);
+
+
+	public Delivery findOneDelivery(int productcode, int pincode);
+
+}

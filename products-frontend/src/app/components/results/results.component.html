@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-12 col-xs-12 my-4">
+            <div class="card bg-image">
+                <div class="card-body">
+                    <h5 class="f-title m-1">Filter:</h5><br />
+                    <form class="f-form">
+                        <div>
+                            <span class="f-name"><b>Brand</b></span><br>
+                            <select [(value)]="selectedBrand" [(ngModel)]="selectedBrand" (ngModelChange)="onSelectedBrand($event)" class="m-1" name="brand" id="brand">
+                                <option value="all">All brands</option>
+                                <option *ngFor="let brandName of productBrands">{{ brandName }}</option>
+                            </select>
+                        </div><br />
+                    </form>
+                    <form [formGroup]="priceForm" class="f-form" *ngIf="isLogIn">
+                        <div>
+                            <span class="f-name"><b>Price</b></span><br>
+                            <input formControlName="minPrice" class="input m-1" type="number" name="price-filter" placeholder="min" min="1">
+                            <input formControlName="maxPrice" class="input m-1" type="number" name="price-filter" placeholder="max" max="5">
+                            <span style="color: red" *ngIf="isInvalidValue">
+                                <br> Min-Price should smaller than Max-Price!
+                            </span>
+                            <span style="color: red" *ngIf="isInvalidValue2">
+                                <br> Min-Price and Max-Price should have values!
+                            </span>
+                            <button type="submit" (click)="priceFilter()" class="f-btn my-2">Apply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-12">
+            <div *ngIf="isNoProducts">
+                <app-not-found></app-not-found>
+            </div>
+            <div class="row row-cols-1 row-cols-md-5 row-cols-sm-3 g-3 m-1">
+                <div class="col" *ngFor="let data of allProducts">
+                    <div class="card">
+                        <img src={{data.image}} class="card-img-top" alt="..." weight="100" height="150">
+                        <div class="card-body">
+                            <h6 class="card-title">{{data.name}}</h6>
+                            <span class="card-brand">{{data.brand}}</span><br />
+                            <span class="card-price" *ngIf="isLogIn">${{data.price}}</span>
+                            <button routerLink="/products-details/{{data.code}}" *ngIf="isLogIn" class="card-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
