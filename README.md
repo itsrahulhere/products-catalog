@@ -24,25 +24,24 @@
 ##### c. Outputs
 
 - Search Page
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/search-page.png" width="1080" height="440" />
+<br/>
 
 - Products View (without Login)
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/products-without-login.png" />
+<br/>
 
 - Products View (with Login)
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/products-with-login.png" />
+<br/>
 
 - Product Details Page (view only if user is login)
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/product-details.png" />
+<br/>
 
 - Login Page
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/login.png" width="1080" height="440" />
+<br/>
 
 - Signup Page
-
 <img src="https://raw.githubusercontent.com/itsrahulhere/products-catalog/main/products-frontend/screenshots/signup.png" />
