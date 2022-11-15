@@ -2,8 +2,8 @@
 
 ### API's
 
-- Login - "http://localhost:9001/users" 
-- Signup - "http://localhost:9001/users" 
+- Login (Generate Token) - "http://localhost:9001/token" (post)
+- Signup - "http://localhost:9001/users" (post)
 - Fetch all products - "http://localhost:9001/products"
 - Fetch one product - "http://localhost:9001/products/{id}"
 - Search products - "http://localhost:9001/products/search/{string}"
