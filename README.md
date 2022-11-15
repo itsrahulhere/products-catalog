@@ -8,7 +8,7 @@
 - Fetch one product - "http://localhost:9001/products/{id}"
 - Search products - "http://localhost:9001/products/search/{string}"
 - Add product - "http://localhost:9001/products" (post)
-- Check Item Serviceablity -"http://localhost:9001/delivery/{productcode}/{pincode}"
+- Check product serviceablity -"http://localhost:9001/delivery/{productcode}/{pincode}"
 
 ##### a. Products-Catalog Server
 
