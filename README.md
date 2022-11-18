@@ -1,3 +1,6 @@
+[click here](#my-anchor) $\color{red}{to\ see\ output\ of\ this\ project}$
+<hr/>
+
 ## products-catalog implementation
 
 ### API's
@@ -20,6 +23,9 @@
 
     - npm install
     - ng serve (Running at PORT - 4200)
+
+
+<a id="my-anchor"></a>
 
 ##### c. Outputs
 
