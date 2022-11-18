@@ -1,5 +1,4 @@
 [click here](#my-anchor) $\color{red}{to\ see\ output\ of\ this\ project}$
-<hr/>
 
 ## products-catalog implementation
 
